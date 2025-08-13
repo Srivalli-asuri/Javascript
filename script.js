@@ -1,5 +1,5 @@
 let header=document.createElement("h1")
-header.textContent="Head OR Tail Tosser"
+header.textContent="Coin Tosser"
 header.id="h1"
 document.body.appendChild(header)
 
@@ -33,4 +33,5 @@ document.body.appendChild(btn)
     }
 }
 tosscoin()
+
 
