@@ -1,39 +1,132 @@
-
-body {
-    background-color: gray;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px;
+/* html,body{
+    margin-top: 10%;
+    margin-left: 20%;
 }
-
-/* Heading style */
-#h1 {
-    color: darkblue;
-    margin-bottom: 20px;
-}
-
-/* Coin image */
-#img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Button styling */
-#btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: darkblue;
-    color: white;
-    border: none;
+#ip{
+    width: 250px;
+    padding: 8px 12px;
+    border: 2px solid black;
     border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    outline:none
+}
+#ip:focus{
+    border-color: blue;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5); /* glowing effect */
+/* }
+#local_container{
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid blue;
+    border-radius: 8px;
+    resize: none;
+    
+}
+#local_container:focus{
+    border-color:blue;
+    box-shadow: 0 0 8px rgba(33,150,243,0.5);
+} */ 
+ /* --- BODY AND LAYOUT --- */
+html, body {
+    margin-top: 10%;
+    margin-left: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8; /* light, professional background */
+    color: #333;
 }
 
-/* Button hover effect */
-#btn:hover {
-    background-color: navy;
+/* --- HEADING --- */
+h1 {
+    color: #222;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
+
+/* --- INPUT FIELD --- */
+#ip {
+    width: 250px;
+    padding: 10px 14px;
+    border: 2px solid #4CAF50; /* green border */
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    cursor: text;
+}
+
+#ip::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+#ip:focus {
+    border-color: #2196F3; /* blue focus */
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+}
+
+/* Hover effect for better UX */
+#ip:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* --- TEXTAREA OR LOCAL CONTAINER --- */
+#local_container {
+    width: 400px;
+    height: 200px;
+    padding: 12px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    resize: none;
+    background-color: #fff;
+    color: #333;
+    margin-top: 15px;          /* space from input */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    cursor: text;
+}
+
+#local_container::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+#local_container:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+    outline: none;
+}
+
+#local_container:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* --- TEXT SELECTION STYLING --- */
+#ip::selection, #local_container::selection {
+    background: #2196F3;
+    color: #fff;
+}
+
+/* --- OPTIONAL: RESPONSIVE ADJUSTMENT --- */
+@media screen and (max-width: 600px) {
+    html, body {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    #local_container {
+        width: 90%;
+    }
+    #ip {
+        width: 90%;
+    }
+}
+
